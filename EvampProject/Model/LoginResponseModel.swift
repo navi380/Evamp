@@ -8,8 +8,9 @@
 import Foundation
 
 
-struct LoginResponseModel:Codable {
-    var success: String
+struct LoginResponseModel: Codable{
+ 
+    var status: String
     var userInfo: UserInfo?
 }
 

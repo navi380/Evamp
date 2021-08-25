@@ -11,9 +11,12 @@ class Injection{
     static let provide = Injection()
 
 
-    func ApiProtocolInjection() -> LoginViewModel{
+    func LoiginApiProtocolInjection() -> LoginViewModel{
         return LoginViewModel(protocolArgument: ApiProtocolImplementationService.shared)
     }
     
+    func ListItemsApiProtocolInjection() -> listItemViewModel{
+        return listItemViewModel(protocolArgument: ApiProtocolImplementationService.shared)
+    }
 
 }

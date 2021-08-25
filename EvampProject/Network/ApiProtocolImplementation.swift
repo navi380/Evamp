@@ -13,40 +13,87 @@ class ApiProtocolImplementationService: ApiProtocol{
     private init(){}
     static let shared = ApiProtocolImplementationService()
     
-    func loginUser(login: LoginModel, completionHandler: @escaping (Result<[LoginResponseModel]>) -> ()) {
+    func loginUser(login: LoginModel, completion: @escaping (Result<LoginResponseModel>) -> ()){
         var urlRequest = URLRequest(url: loginUrl!)
         urlRequest.httpMethod = "POST"
         do {
-            let requestBody = try JSONEncoder().encode(login)
-            urlRequest.httpBody = requestBody
-            urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            let encodedData = try JSONEncoder().encode(login)
+            urlRequest.httpBody = encodedData
+            urlRequest.addValue("application/json", forHTTPHeaderField: "content-type")
         } catch let error {
             print(error.localizedDescription)
         }
-        let task = URLSession.shared.dataTask(with: loginUrl!) { data, response, error in
+        
+        URLSession.shared.dataTask(with: urlRequest) { data , response, error in
             if error != nil || data == nil {
-                    print("Client error!")
-                    return
-                }
+                print("Client error!")
+                return
+            }
             //checking if the reponse is valid
             guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                    print("Server error!")
-                    return
-                }
+                print("Server error!")
+                return
+            }
             guard let mime = response.mimeType, mime == "application/json" else {
-                   print("Wrong MIME type!")
-                   return
-               }
+                print("Wrong MIME type!")
+                return
+            }
             //do catch is more like if else here do is storing data in a variable and catch is checking errors
+            guard let data = data else {
+                return
+            }
             do {
                 let json = JSONDecoder()
-                let postData = try json.decode([LoginResponseModel].self, from: data!)
-                completionHandler(Result.success(postData))
-               } catch {
-                   print("JSON error: \(error.localizedDescription)")
-               }
-        }
-        task.resume()
-        }
+                let decoded = try json.decode(LoginResponseModel.self, from: data)
+                completion(.success(decoded))
+            } catch  {
+                completion(.failure(error))
+                print("JSON error: \(error.localizedDescription)")
+            }
+            
+        }.resume()
     }
+    
+    func listOfItems(listItem: ListRawBody, completion: @escaping (Result<[ListRawBodyResponse]>) -> ()) {
+        var urlRequest = URLRequest(url: listItemUrl!)
+        urlRequest.httpMethod = "POST"
+        do {
+            let encodedData = try JSONEncoder().encode(listItem)
+            urlRequest.httpBody = encodedData
+            urlRequest.addValue("application/json", forHTTPHeaderField: "content-type")
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
+        URLSession.shared.dataTask(with: urlRequest) { data , response, error in
+            if error != nil || data == nil {
+                print("Client error!")
+                return
+            }
+            //checking if the reponse is valid
+            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                print("Server error!")
+                return
+            }
+            guard let mime = response.mimeType, mime == "application/json" else {
+                print("Wrong MIME type!")
+                return
+            }
+            //do catch is more like if else here do is storing data in a variable and catch is checking errors
+            guard let data = data else {
+                return
+            }
+            do {
+                let json = JSONDecoder()
+                let decoded = try json.decode(ListRawBodyResponse.self, from: data)
+                completion(.success([decoded]))
+            } catch  {
+                completion(.failure(error))
+                print("JSON error: \(error.localizedDescription)")
+            }
+            
+        }.resume()
+    }
+    
+}
 

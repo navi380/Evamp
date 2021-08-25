@@ -42,7 +42,7 @@
                                                 <color key="textColor" systemColor="systemGray5Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="demo@evampsanga.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="daN-sP-uHT">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="demo@evampsaanga.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="daN-sP-uHT">
                                                 <rect key="frame" x="60" y="475" width="308" height="50"/>
                                                 <color key="backgroundColor" red="0.088218428190000003" green="0.33231049779999999" blue="0.8326163888" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -257,6 +257,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="0mE-To-FJv"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="cRd-HL-WXO" id="KyS-DO-5x7"/>
+                        <outlet property="nameLabel" destination="3GL-fz-V8R" id="iup-6d-4gO"/>
+                        <outlet property="profileImage" destination="Ro5-17-mIw" id="LuO-dg-PTy"/>
+                        <outlet property="userInfo" destination="w6w-o8-bA9" id="8Zt-Up-8ob"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Nf-Ze-EDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -293,14 +299,14 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij1-Ii-XH8">
-                                                            <rect key="frame" x="140" y="56.666666666666679" width="87.333333333333314" height="20.333333333333336"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij1-Ii-XH8">
+                                                            <rect key="frame" x="140" y="56.666666666666679" width="248" height="20.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMT-zZ-4Tm">
-                                                            <rect key="frame" x="140" y="87" width="56" height="34"/>
+                                                            <rect key="frame" x="140" y="96" width="56" height="34"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                             <color key="textColor" red="0.18278759720000001" green="0.57989156249999996" blue="0.95356875659999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -315,8 +321,9 @@
                                                         <constraint firstItem="dFN-AZ-PsJ" firstAttribute="leading" secondItem="NRL-np-RKf" secondAttribute="leading" constant="19" id="aLE-Jh-ISz"/>
                                                         <constraint firstItem="F3U-br-vTg" firstAttribute="top" secondItem="NRL-np-RKf" secondAttribute="top" constant="18" id="dAi-oI-0Aj"/>
                                                         <constraint firstAttribute="bottom" secondItem="dFN-AZ-PsJ" secondAttribute="bottom" constant="15" id="gXE-01-oRG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ij1-Ii-XH8" secondAttribute="trailing" constant="10" id="hGI-aw-Z2t"/>
                                                         <constraint firstAttribute="trailing" secondItem="dFN-AZ-PsJ" secondAttribute="trailing" constant="290" id="m5B-fB-4QZ"/>
-                                                        <constraint firstItem="nMT-zZ-4Tm" firstAttribute="top" secondItem="ij1-Ii-XH8" secondAttribute="bottom" constant="10" id="nWh-T5-dHW"/>
+                                                        <constraint firstAttribute="bottom" secondItem="nMT-zZ-4Tm" secondAttribute="bottom" constant="10" id="nP7-LF-TZb"/>
                                                         <constraint firstItem="nMT-zZ-4Tm" firstAttribute="leading" secondItem="F3U-br-vTg" secondAttribute="leading" id="wIQ-Oc-6Rc"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
@@ -334,6 +341,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="itemDescription" destination="ij1-Ii-XH8" id="BEG-HE-z9g"/>
+                                            <outlet property="itemImage" destination="dFN-AZ-PsJ" id="TIi-Km-FvO"/>
+                                            <outlet property="itemPrice" destination="nMT-zZ-4Tm" id="gnD-an-CgM"/>
+                                            <outlet property="itemTitle" destination="F3U-br-vTg" id="n66-4b-BD5"/>
                                             <outlet property="listItemImage" destination="dFN-AZ-PsJ" id="2WX-6h-PQQ"/>
                                         </connections>
                                     </tableViewCell>
@@ -354,10 +365,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YFK-65-XZu"/>
+                    <connections>
+                        <outlet property="listItemTableView" destination="ktp-if-u2z" id="w3S-IZ-loh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7z1-RP-fUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4060" y="91"/>
+            <point key="canvasLocation" x="4059.8130841121492" y="90.712742980561558"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1nY-JZ-IQ2">

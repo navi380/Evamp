@@ -10,24 +10,26 @@ import Foundation
 
 
 class LoginViewModel {
-    var postData = [LoginResponseModel]()
     var myProtocol : ApiProtocol
     
     init(protocolArgument : ApiProtocol){
         myProtocol  = protocolArgument
     }
+    var loginResponseModel: LoginResponseModel?
+//    let loginInstance = LoginModel(userEmail: "demo@evampsaanga.com", password: "demo@123")
+
     
-    func loginUser(login: LoginModel, completionHandler: @escaping (Result<[LoginResponseModel]>) -> ()){
-        myProtocol.loginUser(login: login) { respone in
-            switch respone {
-            case let .success(data):
-                self.postData = data
-                print("Api call Successfully")
-                print(self.postData)
-            case .failure(_):
-                print("error")
+    func loginUser(login: LoginModel, completion: @escaping (Result<LoginResponseModel>) -> ()){
+        myProtocol.loginUser(login: login, completion: { result in
+            switch result {
+            case .success(let success):
+                completion(.success(success))
+            case .failure(let error):
+                completion(.failure(error))
+              print(error)
             }
-        }
+        })
     }
+    
 }
 

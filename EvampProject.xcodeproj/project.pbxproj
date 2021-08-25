@@ -10,6 +10,10 @@
 		9B61212726D4BE94007D59B5 /* urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61212626D4BE94007D59B5 /* urls.swift */; };
 		9B61212926D4D831007D59B5 /* alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61212826D4D831007D59B5 /* alert.swift */; };
 		9B61212C26D507DA007D59B5 /* InjectApiProtocolImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61212B26D507DA007D59B5 /* InjectApiProtocolImplementation.swift */; };
+		9B61213226D58CE5007D59B5 /* ListRawBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61213126D58CE5007D59B5 /* ListRawBody.swift */; };
+		9B61213426D58D34007D59B5 /* ListRawBodyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61213326D58D34007D59B5 /* ListRawBodyResponse.swift */; };
+		9B61213A26D58F8E007D59B5 /* listItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61213926D58F8E007D59B5 /* listItemViewModel.swift */; };
+		9B7CB55F26D63F5400A3C904 /* ApiImageDownloadAndCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7CB55E26D63F5400A3C904 /* ApiImageDownloadAndCache.swift */; };
 		9BE3A3E226D37D9F001DFD69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3E126D37D9F001DFD69 /* AppDelegate.swift */; };
 		9BE3A3E426D37D9F001DFD69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3E326D37D9F001DFD69 /* SceneDelegate.swift */; };
 		9BE3A3E626D37D9F001DFD69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3E526D37D9F001DFD69 /* ViewController.swift */; };
@@ -38,6 +42,10 @@
 		9B61212626D4BE94007D59B5 /* urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urls.swift; sourceTree = "<group>"; };
 		9B61212826D4D831007D59B5 /* alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alert.swift; sourceTree = "<group>"; };
 		9B61212B26D507DA007D59B5 /* InjectApiProtocolImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectApiProtocolImplementation.swift; sourceTree = "<group>"; };
+		9B61213126D58CE5007D59B5 /* ListRawBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRawBody.swift; sourceTree = "<group>"; };
+		9B61213326D58D34007D59B5 /* ListRawBodyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRawBodyResponse.swift; sourceTree = "<group>"; };
+		9B61213926D58F8E007D59B5 /* listItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listItemViewModel.swift; sourceTree = "<group>"; };
+		9B7CB55E26D63F5400A3C904 /* ApiImageDownloadAndCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiImageDownloadAndCache.swift; sourceTree = "<group>"; };
 		9BE3A3DE26D37D9F001DFD69 /* EvampProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvampProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE3A3E126D37D9F001DFD69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BE3A3E326D37D9F001DFD69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +100,15 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		9B61213826D58F6F007D59B5 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				9BE3A40126D3E14F001DFD69 /* ItemListViewController.swift */,
+				9B61213926D58F8E007D59B5 /* listItemViewModel.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
 		9BE3A3D526D37D9F001DFD69 = {
 			isa = PBXGroup;
 			children = (
@@ -111,14 +128,14 @@
 		9BE3A3E026D37D9F001DFD69 /* EvampProject */ = {
 			isa = PBXGroup;
 			children = (
-				9B61212A26D507BF007D59B5 /* DI */,
 				9BE3A40E26D3F950001DFD69 /* Network */,
+				9B61212A26D507BF007D59B5 /* DI */,
+				9BE3A41D26D3FFCE001DFD69 /* Constant */,
 				9BE3A40926D3F8B1001DFD69 /* Model */,
 				9BE3A40B26D3F8C2001DFD69 /* View */,
 				9BE3A40A26D3F8BC001DFD69 /* ViewModel */,
 				9BE3A40C26D3F8D6001DFD69 /* StoryBoard */,
 				9BE3A40D26D3F8F0001DFD69 /* Utils */,
-				9BE3A41D26D3FFCE001DFD69 /* Constant */,
 				9BE3A3E126D37D9F001DFD69 /* AppDelegate.swift */,
 				9BE3A3E326D37D9F001DFD69 /* SceneDelegate.swift */,
 				9BE3A3EA26D37DA1001DFD69 /* Assets.xcassets */,
@@ -132,6 +149,8 @@
 			children = (
 				9BE3A41726D3FCFB001DFD69 /* LoginModel.swift */,
 				9BE3A42026D406FB001DFD69 /* LoginResponseModel.swift */,
+				9B61213126D58CE5007D59B5 /* ListRawBody.swift */,
+				9B61213326D58D34007D59B5 /* ListRawBodyResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,9 +158,9 @@
 		9BE3A40A26D3F8BC001DFD69 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9B61212526D4BE58007D59B5 /* Login */,
 				9BE3A3FB26D3B3A2001DFD69 /* HomeViewController.swift */,
-				9BE3A40126D3E14F001DFD69 /* ItemListViewController.swift */,
+				9B61213826D58F6F007D59B5 /* Items */,
+				9B61212526D4BE58007D59B5 /* Login */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -184,6 +203,7 @@
 				9BE3A41926D3FF83001DFD69 /* ApiProtocol.swift */,
 				9BE3A41B26D3FF98001DFD69 /* ApiProtocolImplementation.swift */,
 				9BE3A41E26D40649001DFD69 /* Result.swift */,
+				9B7CB55E26D63F5400A3C904 /* ApiImageDownloadAndCache.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -266,12 +286,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B61213226D58CE5007D59B5 /* ListRawBody.swift in Sources */,
 				9BE3A42126D406FB001DFD69 /* LoginResponseModel.swift in Sources */,
 				9BE3A40426D3E952001DFD69 /* ListItemsTableViewCell.swift in Sources */,
+				9B7CB55F26D63F5400A3C904 /* ApiImageDownloadAndCache.swift in Sources */,
 				9BE3A41F26D40649001DFD69 /* Result.swift in Sources */,
 				9B61212C26D507DA007D59B5 /* InjectApiProtocolImplementation.swift in Sources */,
 				9BE3A3FA26D3AD53001DFD69 /* RoundButton.swift in Sources */,
+				9B61213A26D58F8E007D59B5 /* listItemViewModel.swift in Sources */,
 				9BE3A40226D3E14F001DFD69 /* ItemListViewController.swift in Sources */,
+				9B61213426D58D34007D59B5 /* ListRawBodyResponse.swift in Sources */,
 				9BE3A40826D3EC9C001DFD69 /* CardImage.swift in Sources */,
 				9BE3A41826D3FCFB001DFD69 /* LoginModel.swift in Sources */,
 				9BE3A3E626D37D9F001DFD69 /* ViewController.swift in Sources */,

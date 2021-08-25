@@ -7,5 +7,6 @@
 
 import Foundation
 protocol ApiProtocol {
-    func loginUser(login: LoginModel, completionHandler: @escaping (Result<[LoginResponseModel]>) -> ())
+    func loginUser(login: LoginModel, completion: @escaping (Result<LoginResponseModel>) -> ())
+    func listOfItems(listItem: ListRawBody, completion: @escaping (Result<[ListRawBodyResponse]>) -> ())
 }

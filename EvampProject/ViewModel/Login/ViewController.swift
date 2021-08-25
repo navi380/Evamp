@@ -15,17 +15,18 @@ class ViewController: UIViewController {
             passwordTextField.tintColor = UIColor.white
             passwordTextField.setIcon(UIImage(systemName: "lock")!)
         }
-     }
+    }
     @IBOutlet weak var emailTextField: UITextField!{
         didSet {
             emailTextField.tintColor = UIColor.white
             emailTextField.setIcon(UIImage(systemName: "mail")!)
         }
-     }
+    }
     
-    var dataViewModel = Injection.provide.ApiProtocolInjection()
+    var dataViewModel = Injection.provide.LoiginApiProtocolInjection()
     
     var loginInstance: LoginModel?
+    var loginResponseModel: LoginResponseModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,23 +50,32 @@ class ViewController: UIViewController {
     @IBAction func loginBtn(_ sender: Any) {
         if emailTextField.text != "" && passwordTextField.text != "" && isValidEmail(emailTextField.text!)  {
             loginInstance = LoginModel(userEmail: emailTextField.text!, password: passwordTextField.text!)
-            dataViewModel.loginUser(login: loginInstance!) { result in
-                switch result {
-                case .success(_):
-                    print("successfull")
-                case .failure(let error):
-                    self.showAlert(alertText: "Error", alertMessage: error.localizedDescription)
+            dataViewModel.loginUser(login: loginInstance!) { resultData in
+                switch resultData{
+                case .success(let reponseData):
+                    self.loginResponseModel = reponseData
+                    if self.loginResponseModel?.status == "success"{
+                        DispatchQueue.main.async {
+                            let homeVc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+                            homeVc.responseData = self.loginResponseModel
+                            self.navigationController?.pushViewController(homeVc, animated: true)
+                        }
+                    }
+                    else{
+                        DispatchQueue.main.async {
+                            self.showAlert(alertText: "Error", alertMessage: "Email or password is incorrect")
+                        }
+                    }
+                    
+                case .failure(_):
+                    print("Something is Wrong")
                 }
             }
-            let homeVc = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-            self.navigationController?.pushViewController(homeVc, animated: true)
         }
         else{
             showAlert(alertText: "Email", alertMessage: "Please check Your Email and password")
         }
     }
-    
-    
 }
 
 
@@ -98,7 +108,7 @@ extension ViewController{
     }
     func isValidEmail(_ email: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
+        
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
