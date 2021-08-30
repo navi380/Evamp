@@ -57,9 +57,12 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource{
         DispatchQueue.global(qos: .userInitiated).async() {
             self.network.image(url: URL(string: item.itemImage)!) { data, error in
                 let img = self.image(data: data)
+//                let imageSize: Int = data!.count
+//                print("actual size of image in KB: %f ", Double(imageSize) / 1000.0)
+                let newImage = img!.resize(withSize: CGSize(width: 89, height: 107), contentMode: .contentAspectFill)
                 DispatchQueue.main.async {
                     if (cell.representedIdentifier == idetifier) {
-                        cell.image = img
+                        cell.image = newImage
                     }
                 }
             }

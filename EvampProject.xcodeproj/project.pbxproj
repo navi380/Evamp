@@ -14,6 +14,7 @@
 		9B61213426D58D34007D59B5 /* ListRawBodyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61213326D58D34007D59B5 /* ListRawBodyResponse.swift */; };
 		9B61213A26D58F8E007D59B5 /* listItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61213926D58F8E007D59B5 /* listItemViewModel.swift */; };
 		9B7CB55F26D63F5400A3C904 /* ApiImageDownloadAndCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7CB55E26D63F5400A3C904 /* ApiImageDownloadAndCache.swift */; };
+		9B8D245526DCB68F00A58D57 /* ResizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8D245426DCB68F00A58D57 /* ResizeImage.swift */; };
 		9BE3A3E226D37D9F001DFD69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3E126D37D9F001DFD69 /* AppDelegate.swift */; };
 		9BE3A3E426D37D9F001DFD69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3E326D37D9F001DFD69 /* SceneDelegate.swift */; };
 		9BE3A3E626D37D9F001DFD69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3E526D37D9F001DFD69 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 		9B61213326D58D34007D59B5 /* ListRawBodyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRawBodyResponse.swift; sourceTree = "<group>"; };
 		9B61213926D58F8E007D59B5 /* listItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listItemViewModel.swift; sourceTree = "<group>"; };
 		9B7CB55E26D63F5400A3C904 /* ApiImageDownloadAndCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiImageDownloadAndCache.swift; sourceTree = "<group>"; };
+		9B8D245426DCB68F00A58D57 /* ResizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeImage.swift; sourceTree = "<group>"; };
 		9BE3A3DE26D37D9F001DFD69 /* EvampProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvampProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BE3A3E126D37D9F001DFD69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BE3A3E326D37D9F001DFD69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				9BE3A40726D3EC9C001DFD69 /* CardImage.swift */,
 				9BE3A42426D42D9B001DFD69 /* HideKeyBoardTappedArround.swift */,
 				9B61212826D4D831007D59B5 /* alert.swift */,
+				9B8D245426DCB68F00A58D57 /* ResizeImage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				9BE3A40426D3E952001DFD69 /* ListItemsTableViewCell.swift in Sources */,
 				9B7CB55F26D63F5400A3C904 /* ApiImageDownloadAndCache.swift in Sources */,
 				9BE3A41F26D40649001DFD69 /* Result.swift in Sources */,
+				9B8D245526DCB68F00A58D57 /* ResizeImage.swift in Sources */,
 				9B61212C26D507DA007D59B5 /* InjectApiProtocolImplementation.swift in Sources */,
 				9BE3A3FA26D3AD53001DFD69 /* RoundButton.swift in Sources */,
 				9B61213A26D58F8E007D59B5 /* listItemViewModel.swift in Sources */,

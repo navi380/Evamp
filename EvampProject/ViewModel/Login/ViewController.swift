@@ -22,6 +22,8 @@ class ViewController: UIViewController {
             emailTextField.setIcon(UIImage(systemName: "mail")!)
         }
     }
+    @IBOutlet weak var loginBtn: RoundButton!
+    
     
     var dataViewModel = Injection.provide.LoiginApiProtocolInjection()
     
@@ -48,6 +50,7 @@ class ViewController: UIViewController {
         passwordTextField.addBottomBorder()
     }
     @IBAction func loginBtn(_ sender: Any) {
+        self.loginBtn.isEnabled = false
         if emailTextField.text != "" && passwordTextField.text != "" && isValidEmail(emailTextField.text!)  {
             loginInstance = LoginModel(userEmail: emailTextField.text!, password: passwordTextField.text!)
             dataViewModel.loginUser(login: loginInstance!) { resultData in
@@ -64,16 +67,19 @@ class ViewController: UIViewController {
                     else{
                         DispatchQueue.main.async {
                             self.showAlert(alertText: "Error", alertMessage: "Email or password is incorrect")
+                            self.loginBtn.isEnabled = true
                         }
                     }
                     
                 case .failure(_):
                     print("Something is Wrong")
+                    self.loginBtn.isEnabled = true
                 }
             }
         }
         else{
             showAlert(alertText: "Email", alertMessage: "Please check Your Email and password")
+            self.loginBtn.isEnabled = true
         }
     }
 }

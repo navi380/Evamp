@@ -160,6 +160,7 @@
                     <navigationItem key="navigationItem" id="Qcg-De-7Ie"/>
                     <connections>
                         <outlet property="emailTextField" destination="daN-sP-uHT" id="8WY-QC-beb"/>
+                        <outlet property="loginBtn" destination="Ls2-Al-FI8" id="mH9-0A-PfJ"/>
                         <outlet property="passwordTextField" destination="laj-L2-ZSR" id="SS2-KG-KPx"/>
                         <outlet property="scrollView" destination="BuR-Xv-ksy" id="Xa0-k0-Rsg"/>
                     </connections>
@@ -290,7 +291,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NRL-np-RKf" customClass="CardView" customModule="EvampProject" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="15" width="398" height="140"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2021-08-23 at 12.05.04 PM" translatesAutoresizingMaskIntoConstraints="NO" id="dFN-AZ-PsJ">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2021-08-23 at 12.05.04 PM" translatesAutoresizingMaskIntoConstraints="NO" id="dFN-AZ-PsJ">
                                                             <rect key="frame" x="19" y="18" width="89" height="107"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3U-br-vTg">
