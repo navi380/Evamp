@@ -37,7 +37,7 @@
                                                 <color key="highlightedColor" red="0.93340337279999996" green="0.92529582980000002" blue="0.93753182889999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ij-GC-Ui8">
-                                                <rect key="frame" x="59.999999999999993" y="453" width="105.33333333333331" height="17"/>
+                                                <rect key="frame" x="60" y="453" width="338" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemGray5Color"/>
                                                 <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcT-B3-7vH">
-                                                <rect key="frame" x="60" y="545" width="100" height="17"/>
+                                                <rect key="frame" x="60" y="545" width="338" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" systemColor="systemGray5Color"/>
                                                 <nil key="highlightedColor"/>
@@ -120,12 +120,12 @@
                                             <constraint firstItem="laj-L2-ZSR" firstAttribute="trailing" secondItem="daN-sP-uHT" secondAttribute="trailing" id="3nv-aT-v4u"/>
                                             <constraint firstItem="YhQ-NT-L1w" firstAttribute="leading" secondItem="cvO-2P-TKS" secondAttribute="leading" constant="60" id="5XP-Sm-6Ay"/>
                                             <constraint firstItem="7ij-GC-Ui8" firstAttribute="leading" secondItem="YhQ-NT-L1w" secondAttribute="leading" id="7Yf-sj-aog"/>
-                                            <constraint firstAttribute="right" secondItem="7ij-GC-Ui8" secondAttribute="right" constant="262.67000000000002" id="ATO-e4-FHT"/>
+                                            <constraint firstAttribute="right" secondItem="7ij-GC-Ui8" secondAttribute="right" constant="30" id="ATO-e4-FHT"/>
                                             <constraint firstItem="YhQ-NT-L1w" firstAttribute="top" secondItem="eeY-ks-9XA" secondAttribute="bottom" constant="18" id="DeV-dO-0z7"/>
                                             <constraint firstItem="7ij-GC-Ui8" firstAttribute="top" secondItem="YhQ-NT-L1w" secondAttribute="bottom" constant="64.329999999999998" id="Kn6-Da-hhl"/>
                                             <constraint firstItem="Ls2-Al-FI8" firstAttribute="left" secondItem="cvO-2P-TKS" secondAttribute="left" constant="80" id="Lsz-41-Pev"/>
                                             <constraint firstItem="eeY-ks-9XA" firstAttribute="top" secondItem="cvO-2P-TKS" secondAttribute="top" constant="100" id="Qbw-9C-KrX"/>
-                                            <constraint firstAttribute="trailing" secondItem="zcT-B3-7vH" secondAttribute="trailing" constant="268" id="UvJ-De-BYn"/>
+                                            <constraint firstAttribute="trailing" secondItem="zcT-B3-7vH" secondAttribute="trailing" constant="30" id="UvJ-De-BYn"/>
                                             <constraint firstItem="zcT-B3-7vH" firstAttribute="leading" secondItem="7ij-GC-Ui8" secondAttribute="leading" id="XSe-nl-sUk"/>
                                             <constraint firstAttribute="trailing" secondItem="daN-sP-uHT" secondAttribute="trailing" constant="60" id="YzD-Yu-c2k"/>
                                             <constraint firstItem="laj-L2-ZSR" firstAttribute="leading" secondItem="zcT-B3-7vH" secondAttribute="leading" id="ZqY-EP-wCL"/>
@@ -161,9 +161,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Qcg-De-7Ie"/>
                     <connections>
-                        <outlet property="emailTextField" destination="daN-sP-uHT" id="8WY-QC-beb"/>
+                        <outlet property="emailTextField" destination="daN-sP-uHT" id="j6c-vy-8Wm"/>
                         <outlet property="loginBtn" destination="Ls2-Al-FI8" id="mH9-0A-PfJ"/>
-                        <outlet property="passwordTextField" destination="laj-L2-ZSR" id="SS2-KG-KPx"/>
+                        <outlet property="passwordTextField" destination="laj-L2-ZSR" id="3DZ-TG-9Jq"/>
                         <outlet property="scrollView" destination="BuR-Xv-ksy" id="Xa0-k0-Rsg"/>
                     </connections>
                 </viewController>
