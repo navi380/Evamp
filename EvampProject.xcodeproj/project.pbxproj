@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B61212726D4BE94007D59B5 /* urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61212626D4BE94007D59B5 /* urls.swift */; };
-		9B61212926D4D831007D59B5 /* alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61212826D4D831007D59B5 /* alert.swift */; };
+		9B61212926D4D831007D59B5 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61212826D4D831007D59B5 /* Alert.swift */; };
 		9B61212C26D507DA007D59B5 /* InjectApiProtocolImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61212B26D507DA007D59B5 /* InjectApiProtocolImplementation.swift */; };
 		9B61213226D58CE5007D59B5 /* ListRawBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61213126D58CE5007D59B5 /* ListRawBody.swift */; };
 		9B61213426D58D34007D59B5 /* ListRawBodyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B61213326D58D34007D59B5 /* ListRawBodyResponse.swift */; };
@@ -24,11 +24,11 @@
 		9BE3A3F826D38EB1001DFD69 /* TextFieldWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3F726D38EB1001DFD69 /* TextFieldWithImage.swift */; };
 		9BE3A3FA26D3AD53001DFD69 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3F926D3AD53001DFD69 /* RoundButton.swift */; };
 		9BE3A3FC26D3B3A2001DFD69 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3FB26D3B3A2001DFD69 /* HomeViewController.swift */; };
-		9BE3A3FE26D3D023001DFD69 /* hexStringUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3FD26D3D023001DFD69 /* hexStringUIColor.swift */; };
+		9BE3A3FE26D3D023001DFD69 /* HexStringUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3FD26D3D023001DFD69 /* HexStringUIColor.swift */; };
 		9BE3A40026D3DE91001DFD69 /* SameNavBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A3FF26D3DE91001DFD69 /* SameNavBarItems.swift */; };
 		9BE3A40226D3E14F001DFD69 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A40126D3E14F001DFD69 /* ItemListViewController.swift */; };
 		9BE3A40426D3E952001DFD69 /* ListItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A40326D3E952001DFD69 /* ListItemsTableViewCell.swift */; };
-		9BE3A40626D3EA7E001DFD69 /* card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A40526D3EA7E001DFD69 /* card.swift */; };
+		9BE3A40626D3EA7E001DFD69 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A40526D3EA7E001DFD69 /* Card.swift */; };
 		9BE3A40826D3EC9C001DFD69 /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A40726D3EC9C001DFD69 /* CardImage.swift */; };
 		9BE3A41826D3FCFB001DFD69 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A41726D3FCFB001DFD69 /* LoginModel.swift */; };
 		9BE3A41A26D3FF83001DFD69 /* ApiProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BE3A41926D3FF83001DFD69 /* ApiProtocol.swift */; };
@@ -41,7 +41,7 @@
 
 /* Begin PBXFileReference section */
 		9B61212626D4BE94007D59B5 /* urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = urls.swift; sourceTree = "<group>"; };
-		9B61212826D4D831007D59B5 /* alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alert.swift; sourceTree = "<group>"; };
+		9B61212826D4D831007D59B5 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		9B61212B26D507DA007D59B5 /* InjectApiProtocolImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectApiProtocolImplementation.swift; sourceTree = "<group>"; };
 		9B61213126D58CE5007D59B5 /* ListRawBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRawBody.swift; sourceTree = "<group>"; };
 		9B61213326D58D34007D59B5 /* ListRawBodyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRawBodyResponse.swift; sourceTree = "<group>"; };
@@ -59,11 +59,11 @@
 		9BE3A3F726D38EB1001DFD69 /* TextFieldWithImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithImage.swift; sourceTree = "<group>"; };
 		9BE3A3F926D3AD53001DFD69 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		9BE3A3FB26D3B3A2001DFD69 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		9BE3A3FD26D3D023001DFD69 /* hexStringUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hexStringUIColor.swift; sourceTree = "<group>"; };
+		9BE3A3FD26D3D023001DFD69 /* HexStringUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexStringUIColor.swift; sourceTree = "<group>"; };
 		9BE3A3FF26D3DE91001DFD69 /* SameNavBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameNavBarItems.swift; sourceTree = "<group>"; };
 		9BE3A40126D3E14F001DFD69 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
 		9BE3A40326D3E952001DFD69 /* ListItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsTableViewCell.swift; sourceTree = "<group>"; };
-		9BE3A40526D3EA7E001DFD69 /* card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = card.swift; sourceTree = "<group>"; };
+		9BE3A40526D3EA7E001DFD69 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		9BE3A40726D3EC9C001DFD69 /* CardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImage.swift; sourceTree = "<group>"; };
 		9BE3A41726D3FCFB001DFD69 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		9BE3A41926D3FF83001DFD69 /* ApiProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProtocol.swift; sourceTree = "<group>"; };
@@ -189,12 +189,12 @@
 			children = (
 				9BE3A3F926D3AD53001DFD69 /* RoundButton.swift */,
 				9BE3A3F726D38EB1001DFD69 /* TextFieldWithImage.swift */,
-				9BE3A3FD26D3D023001DFD69 /* hexStringUIColor.swift */,
+				9BE3A3FD26D3D023001DFD69 /* HexStringUIColor.swift */,
 				9BE3A3FF26D3DE91001DFD69 /* SameNavBarItems.swift */,
-				9BE3A40526D3EA7E001DFD69 /* card.swift */,
+				9BE3A40526D3EA7E001DFD69 /* Card.swift */,
 				9BE3A40726D3EC9C001DFD69 /* CardImage.swift */,
 				9BE3A42426D42D9B001DFD69 /* HideKeyBoardTappedArround.swift */,
-				9B61212826D4D831007D59B5 /* alert.swift */,
+				9B61212826D4D831007D59B5 /* Alert.swift */,
 				9B8D245426DCB68F00A58D57 /* ResizeImage.swift */,
 			);
 			path = Utils;
@@ -303,8 +303,8 @@
 				9BE3A40826D3EC9C001DFD69 /* CardImage.swift in Sources */,
 				9BE3A41826D3FCFB001DFD69 /* LoginModel.swift in Sources */,
 				9BE3A3E626D37D9F001DFD69 /* ViewController.swift in Sources */,
-				9BE3A40626D3EA7E001DFD69 /* card.swift in Sources */,
-				9BE3A3FE26D3D023001DFD69 /* hexStringUIColor.swift in Sources */,
+				9BE3A40626D3EA7E001DFD69 /* Card.swift in Sources */,
+				9BE3A3FE26D3D023001DFD69 /* HexStringUIColor.swift in Sources */,
 				9BE3A3E226D37D9F001DFD69 /* AppDelegate.swift in Sources */,
 				9BE3A3F826D38EB1001DFD69 /* TextFieldWithImage.swift in Sources */,
 				9BE3A3FC26D3B3A2001DFD69 /* HomeViewController.swift in Sources */,
@@ -314,7 +314,7 @@
 				9BE3A41C26D3FF98001DFD69 /* ApiProtocolImplementation.swift in Sources */,
 				9BE3A40026D3DE91001DFD69 /* SameNavBarItems.swift in Sources */,
 				9BE3A42326D40944001DFD69 /* LoginViewModel.swift in Sources */,
-				9B61212926D4D831007D59B5 /* alert.swift in Sources */,
+				9B61212926D4D831007D59B5 /* Alert.swift in Sources */,
 				9B61212726D4BE94007D59B5 /* urls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
